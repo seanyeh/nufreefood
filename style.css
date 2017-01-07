@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-
+    font-size: 2.5em;
 }
 
 h2 {
@@ -8,19 +8,50 @@ h2 {
     padding-top: 0;
 }
 
-h1, h2 {
+h3 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+h4 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1em;
+    font-style: italic;
+}
+
+h1, h2, h3, h4 {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #4E2A84;
+}
+
+#disclaimer {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Items */
+.item {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+/* Date and time */
 .date {
     width: 20%;
     text-align: center;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
 }
 
-.desc {
-    width: 80%;
-
-    font-family: 'Roboto Slab', serif;
+.date {
+    font-weight: bold;
 }
 
 .date-month {
@@ -32,8 +63,61 @@ h1, h2 {
     color: #333333;
 }
 
+
+/* Description */
+.location {
+    padding-left: 2em;
+    padding-bottom: 1em;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.desc {
+    width: 80%;
+
+    font-family: 'Roboto Slab', serif;
+}
+
+.desc-text {
+    display: none;
+}
+
+
 #main {
     width: 85%;
     margin: 0 auto;
     border-left: 4px solid #bbbbbb;
 }
+
+
+@media screen and (max-width: 480px) {
+    h2 {
+        text-align: center;
+    }
+
+    .item {
+        border-top: 1px solid #bbbbbb;
+    }
+
+    .date {
+        min-width: 100%;
+    }
+
+    .desc {
+        min-width: 100%;
+    }
+
+    .div-toggle {
+        text-align: center;
+    }
+
+    .location {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #main {
+        border: 0;
+    }
+}
+
