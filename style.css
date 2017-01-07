@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+
+}
+
+h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.date {
+    width: 20%;
+    text-align: center;
+}
+
+.desc {
+    width: 80%;
+
+    font-family: 'Roboto Slab', serif;
+}
+
+.date-month {
+    font-size: 1.5em;
+}
+
+.date-num {
+    font-size: 3em;
+    color: #333333;
+}
+
+#main {
+    width: 85%;
+    margin: 0 auto;
+    border-left: 4px solid #bbbbbb;
+}
