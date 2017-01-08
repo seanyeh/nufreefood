@@ -12,6 +12,8 @@ var QUERIES = [
     "food until",
     "free food",
     "food provided",
+    "malnati",
+    "giordano",
 ];
 
 var MONTHS = [
