@@ -20,6 +20,10 @@ var MONTHS = [
     "Sep", "Oct", "Nov", "Dec"
 ];
 
+var DAYS = [
+    "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
+];
+
 
 /*
  * Create DOM elements from an array of strings, and add them to a parent
@@ -69,10 +73,12 @@ function addItem(item) {
     }
 
     var month = MONTHS[itemDate.getMonth()];
+    var day = DAYS[itemDate.getDay()];
     var num = itemDate.getDate();
 
     dateDiv.append($("<div class='date-month'>").text(month));
     dateDiv.append($("<div class='date-num'>").text(num));
+    dateDiv.append($("<div class='date-time'>").text(day));
     dateDiv.append($("<div class='date-time'>").text(toHumanTime(itemDate)));
 
 
