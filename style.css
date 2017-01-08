@@ -124,5 +124,9 @@ a {
     #main {
         border: 0;
     }
+
+    #footer {
+        border-top: 1px solid #bbbbbb;
+    }
 }
 
