@@ -18,6 +18,8 @@ var QUERIES = [
     "popcorn",
     "cotton candy",
     "take care of food",
+    "coffee",
+    "dessert",
 ];
 
 var MONTHS = [
