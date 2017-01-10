@@ -17,6 +17,7 @@ var QUERIES = [
     "ice cream",
     "popcorn",
     "cotton candy",
+    "take care of food",
 ];
 
 var MONTHS = [
