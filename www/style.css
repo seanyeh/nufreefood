@@ -9,13 +9,11 @@ h2 {
 }
 
 h3 {
-    text-align: center;
     font-weight: normal;
     font-size: 1em;
 }
 
 h4 {
-    text-align: center;
     font-weight: normal;
     font-size: 1em;
     font-style: italic;
@@ -23,11 +21,16 @@ h4 {
 
 h1, h2, h3, h4 {
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
     color: #4E2A84;
+}
+
+.desc h2 {
+    text-align: left;
 }
 
 #disclaimer {
@@ -100,7 +103,7 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-    h2 {
+    .desc h2 {
         text-align: center;
     }
 
