@@ -35,6 +35,11 @@ a {
     margin: 0 auto;
 }
 
+.obfuscate {
+    display: none;
+}
+
+
 /* Items */
 .item {
     padding-top: 1em;
@@ -93,7 +98,6 @@ a {
     font-size: 0.8em;
     text-align: center;
 }
-
 
 @media screen and (max-width: 480px) {
     h2 {
