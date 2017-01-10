@@ -14,6 +14,9 @@ var QUERIES = [
     "food provided",
     "malnati",
     "giordano",
+    "ice cream",
+    "popcorn",
+    "cotton candy",
 ];
 
 var MONTHS = [
