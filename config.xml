@@ -1,27 +1,32 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.seanyeh.nufreefood" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>NUFreeFood</name>
-    <description>
-        A "Free Food" event finder for Northwestern University
+  <name>NUFreeFood</name>
+  <description>
+        A &quot;Free Food&quot; event finder for Northwestern University
     </description>
-    <author email="nufreefood@seanyeh.com" href="http://seanyeh.com">
+  <author email="nufreefood@seanyeh.com" href="http://seanyeh.com">
         Sean Yeh
     </author>
-    <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
+  <content src="index.html"/>
+  <plugin name="cordova-plugin-whitelist" spec="1"/>
+  <access origin="*"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="geo:*"/>
+  <platform name="android">
+    <allow-intent href="market:*"/>
+    <icon density="ldpi" src="platforms/android/res/drawable-ldpi/icon.png" />
+    <icon density="mdpi" src="platforms/android/res/drawable-mdpi/icon.png" />
+    <icon density="hdpi" src="platforms/android/res/drawable-hdpi/icon.png" />
+    <icon density="xhdpi" src="platforms/android/res/drawable-xhdpi/icon.png" />
+    <icon density="xxhdpi" src="platforms/android/res/drawable-xxhdpi/icon.png" />
+    <icon density="xxxhdpi" src="platforms/android/res/drawable-xxxhdpi/icon.png" />
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*"/>
+    <allow-intent href="itms-apps:*"/>
+  </platform>
 </widget>
-
