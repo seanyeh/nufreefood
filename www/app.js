@@ -1,3 +1,18 @@
+/*
+ * These are the manual overrides.
+ * Remove false positives and add new events
+ *   Currently, can only add new events that were previously removed
+ */
+var OVERRIDES = [
+    // 1/20/17
+    {remove: true, id: 498333},
+
+    // For all of winter quarter?
+    {remove: true, text: "data as art exhibition"},
+    {add: true, id: 509629}, // 1/20/17
+];
+
+
 var QUERIES = [
     "will be served",
     "pizza",
@@ -128,22 +143,65 @@ function addItem(item) {
     $("#main").append(itemDiv);
 }
 
+function createFilterFunc(overrideObj) {
+    return function(obj) {
+        // If checking on id
+        if (overrideObj.id) {
+            return obj.id !== overrideObj.id;
+        }
+
+        // If checking title + description
+        if (overrideObj.text) {
+            console.log("checking text");
+            var desc = obj.description.join(" ");
+            return !(new RegExp(overrideObj.text, "i")).test(obj.title + " " + desc);
+        }
+    };
+}
+
+function createFindByID(id) {
+    return function(obj) {
+        return obj.id === id;
+    };
+}
+
+function displayData(data) {
+    // Sort data
+    data.sort(function(item1, item2) {
+        var d1 = new Date(item1.datetime.start);
+        var d2 = new Date(item2.datetime.start);
+
+        return d1 - d2;
+    });
+
+    for (var i = 0; i < data.length; i++) {
+        addItem(data[i]);
+    }
+}
+
 window.onload = function() {
     var url = "http://api.nuevents.seanyeh.com/search?q='" + QUERIES.join("'&q='") + "'";
     $.getJSON(url, function(data){
         console.log("Received data!");
         console.log(data);
 
-        // Sort data
-        data.sort(function(item1, item2) {
-            var d1 = new Date(item1.datetime.start);
-            var d2 = new Date(item2.datetime.start);
+        // Apply manual overrides
+        var cur, newItem;
+        var newData = data;
+        for (var i = 0; i < OVERRIDES.length; i++) {
+            cur = OVERRIDES[i];
 
-            return d1 - d2;
-        });
-
-        for (var i = 0; i < data.length; i++){
-            addItem(data[i]);
+            // Remove false positives
+            if (cur.remove) {
+                newData = newData.filter(createFilterFunc(cur));
+            }
+            // Add extra events
+            if (cur.add) {
+                newItem = data.find(createFindByID(cur.id));
+                newData.push(newItem);
+            }
         }
+
+        displayData(newData);
     });
 };
