@@ -7,6 +7,9 @@ var OVERRIDES = [
     // 1/20/17
     {remove: true, id: 498333},
 
+    // Duplicate of 511667
+    {remove: true, id: 512460},
+
     // For all of winter quarter?
     {remove: true, text: "data as art exhibition"},
     {add: true, id: 509629}, // 1/20/17
