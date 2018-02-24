@@ -183,7 +183,7 @@ function displayData(data) {
 }
 
 window.onload = function() {
-    var url = "http://api.nuevents.seanyeh.com/search?q='" + QUERIES.join("'&q='") + "'";
+    var url = "https://api.nuevents.seanyeh.com/search?q='" + QUERIES.join("'&q='") + "'";
     $.getJSON(url, function(data){
         console.log("Received data!");
         console.log(data);
